@@ -1,0 +1,9 @@
+.env
+
+*.zip
+
+backups/
+tmp/
+logs/
+
+*.log

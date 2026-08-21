@@ -32,6 +32,14 @@ PostgreSQL no publica `5432` al host. Solo es accesible desde la red Docker `pen
 ./pentaho-server-ce-9.4.0.0-343.zip
 ```
 
+Descarga el ZIP Community Edition desde el sitio oficial de Pentaho/Hitachi Vantara o desde un mirror/archivo confiable que publique la edición CE. El archivo debe llamarse exactamente:
+
+```text
+pentaho-server-ce-9.4.0.0-343.zip
+```
+
+Después de descargarlo, colócalo en la raíz de este proyecto, junto a `docker-compose.yml`. El ZIP no se sube a GitHub porque está excluido por `.gitignore`.
+
 ## Arrancar
 
 ```bash

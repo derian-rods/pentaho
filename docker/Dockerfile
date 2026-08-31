@@ -25,7 +25,8 @@ RUN unzip -q /tmp/pentaho-server.zip -d /opt \
     && chown -R pentaho:pentaho /opt/pentaho-server
 
 COPY docker/entrypoint.sh /usr/local/bin/pentaho-entrypoint.sh
-RUN chmod +x /usr/local/bin/pentaho-entrypoint.sh
+RUN bash -n /usr/local/bin/pentaho-entrypoint.sh \
+    && chmod +x /usr/local/bin/pentaho-entrypoint.sh
 
 WORKDIR /opt/pentaho-server
 EXPOSE 8080

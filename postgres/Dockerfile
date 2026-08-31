@@ -12,4 +12,5 @@ RUN mkdir -p /opt/pentaho-sql \
     && rm /tmp/pentaho-server.zip
 
 COPY postgres/init/10-init-pentaho.sh /docker-entrypoint-initdb.d/10-init-pentaho.sh
-RUN chmod +x /docker-entrypoint-initdb.d/10-init-pentaho.sh
+RUN bash -n /docker-entrypoint-initdb.d/10-init-pentaho.sh \
+    && chmod +x /docker-entrypoint-initdb.d/10-init-pentaho.sh
